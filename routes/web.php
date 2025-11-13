@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TableListController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/budgetlist', function () {
+Route::get('/', function () {
     return view('homelayouts.homebudgetlist');
 });
 
-Auth::routes();
+// Route::get('/test', function () {
+//     return view('main.sample.table-list');
+// });
+// Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+// Route::get('/test2', [TableListController::class, 'tableList']);
